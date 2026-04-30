@@ -29,7 +29,7 @@ export default function Home() {
       return alert("Algo deu errado, tente novamente");
     }
 
-    setConvertedFile(JSON.stringify(parsedFile, null));
+    setConvertedFile(JSON.stringify(parsedFile, null, 2));
 
   }
 
@@ -46,9 +46,9 @@ export default function Home() {
             <h1>
               CONVERTENDO ARQUIVO PARA JSON:
             </h1>
-            <code className="mt-10 p-6 max-w-5xl">
+            <pre  className="mt-10 w-full">
               {convertedFileJson}
-            </code>
+            </pre>
 
             <button onClick={resetProcess} className="bg-green-700 px-4 py-1 mt-4 rounded-xl cursor-pointer hover:bg-green-600">
               Resetar processo
