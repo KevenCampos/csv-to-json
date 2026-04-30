@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import CSVLineParser from "@/services/CSVLineParser";
 
 export default function Home() {
 
@@ -17,7 +18,19 @@ export default function Home() {
     }
 
     const fileContent = await file.text()
-    setConvertedFile(fileContent)
+    if (!fileContent){
+      return alert("Algo deu errado, tente novamente");
+    }
+
+    const csvLineParser = new CSVLineParser(fileContent);
+    const parsedFile = csvLineParser.parse();
+
+    if (!parsedFile || parsedFile.length === 0){
+      return alert("Algo deu errado, tente novamente");
+    }
+
+    setConvertedFile(JSON.stringify(parsedFile, null, 2));
+
   }
 
   const resetProcess = () => {
