@@ -51,8 +51,7 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 font-sans px-4">
-      
+    <div className="flex flex-col flex-1 items-center justify-center min-h-screen bg-linear-to-br from-slate-900 via-blue-900 to-slate-900 font-sans px-4">
       {
         convertedFileJson ? 
           <div className="w-full max-w-4xl bg-slate-800/50 backdrop-blur border border-slate-700 rounded-2xl shadow-2xl p-8">
@@ -93,7 +92,7 @@ export default function Home() {
               Converta seus arquivos CSV em JSON de forma rápida e eficiente
             </p>
             
-            <label className="inline-block bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 rounded-lg cursor-pointer transition-all shadow-lg border border-blue-500/30">
+            <label className="inline-block bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold px-8 py-4 rounded-lg cursor-pointer transition-all shadow-lg border border-blue-500/30">
               Escolher arquivo
               <input 
                 type="file" 

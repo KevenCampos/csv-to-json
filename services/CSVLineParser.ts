@@ -19,6 +19,9 @@ class CSVLineParser {
         } 
     }
 
+    /*
+        Maisa
+    */
     private formatName = (line: string) => {
         /**
          * Vamos pegar a parte do nome, que por via de regra é a primeira parte da linha, usando o pipe como separador
@@ -40,6 +43,9 @@ class CSVLineParser {
         return formatted;
     }
 
+    /*
+        Maria
+    */
     private formatCPF = (line: string) => {
 
         // Através do pipe, vamos pegar a parte do CPF, que por via de regra é a segunda parte da linha (index 1)
@@ -65,6 +71,9 @@ class CSVLineParser {
         return formatted;
     }
 
+    /*
+        Elton
+    */
     private formatState = (line: string) => {
         /**
          * Pega a parte após o último '|', que por via de regra é o estado
